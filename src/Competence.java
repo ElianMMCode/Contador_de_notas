@@ -1,12 +1,42 @@
-protected class Competence {
+import java.util.Scanner;
+
+public class Competence {
 
     private String nameCompetence;
     private String ficha;
     private int totalStudents;
+    private Student[] students;
     private String nameInstructor;
-    private int grade;
-    private Student[] student = new Student[totalStudents];
+    private int i;
 
+
+    public Competence (int totalStudents){
+        this.students = new Student[totalStudents];
+        this.i = 0;
+    }
+
+    private int grade;
+    private Scanner t = new Scanner(System.in);
+
+    public int getTotalStudents() {
+        return totalStudents;
+    }
+
+    public void addStudent(Student x){
+        students[i++] = x;
+    }
+
+    public Student getListStudent(int i){
+        return students[i];
+    }
+
+    public Student[] getStudents(){
+        return students;
+    }
+
+    public void setTotalStudents(int totalStudents) {
+        this.totalStudents = totalStudents;
+    }
 
     //Constructores
     public Competence() {
@@ -45,11 +75,5 @@ protected class Competence {
     }
 
 
-    public Student[] getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student[] student) {
-        this.student = student;
-    }
 }
+

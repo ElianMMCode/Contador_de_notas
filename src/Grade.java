@@ -1,5 +1,6 @@
-private class Grade extends Student {
+public class Grade {
     private int totalGrades;
+
     private int[] grades = new int[totalGrades];
 
     public int getTotalGrades() {

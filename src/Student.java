@@ -1,9 +1,16 @@
-private class Student extends Competence {
+public class Student {
 
     private String name;
     private String lastName;
     private int totalGrades;
     private int[] grades = new int[totalGrades];
+
+
+
+    public Student(String name, String lastName){
+        this.name = name;
+        this.lastName = lastName;
+    }
 
     public int getTotalGrades() {
         return totalGrades;
@@ -14,7 +21,7 @@ private class Student extends Competence {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -36,4 +43,7 @@ private class Student extends Competence {
     public void setTotalGrades(int totalGrades) {
         this.totalGrades = totalGrades;
     }
+
+
+
 }
