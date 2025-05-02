@@ -1,30 +1,30 @@
-import java.util.Scanner;
-
 public class Competence {
 
     private String nameCompetence;
     private String ficha;
     private int totalStudents;
+    private int totalGrades;
     private Student[] students;
     private String nameInstructor;
-    private int i;
 
 
     public Competence (int totalStudents){
         this.students = new Student[totalStudents];
-        this.i = 0;
     }
 
-    private int grade;
-    private Scanner t = new Scanner(System.in);
+
+
 
     public int getTotalStudents() {
         return totalStudents;
     }
 
-    public void addStudent(Student x){
-        students[i++] = x;
+    public void addStudent(Student x, int i){
+        students[i] = x;
     }
+
+
+
 
     public Student getListStudent(int i){
         return students[i];
@@ -38,6 +38,8 @@ public class Competence {
         this.totalStudents = totalStudents;
     }
 
+
+
     //Constructores
     public Competence() {
     }
@@ -47,11 +49,11 @@ public class Competence {
 
 
     //getters
-    public String getFicha(String ficha) {
+    public String getFicha() {
         return this.ficha;
     }
 
-    public String getNameCompetence(String nameCompetence) {
+    public String getNameCompetence() {
         return this.nameCompetence;
 
     }
@@ -73,7 +75,13 @@ public class Competence {
     public void setNameInstructor(String nameInstructor) {
         this.nameInstructor = nameInstructor;
     }
+    public int getTotalGrades() {
+        return totalGrades;
+    }
 
+    public void setTotalGrades(int totalGrades) {
+        this.totalGrades = totalGrades;
+    }
 
 }
 

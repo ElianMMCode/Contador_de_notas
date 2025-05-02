@@ -1,49 +1,44 @@
-public class Student {
-
+public class Student extends Competence {
     private String name;
     private String lastName;
-    private int totalGrades;
-    private int[] grades = new int[totalGrades];
+    private final int[] grades;
+    private final int totalGrades;
+
+    public double getAverege() {
+        return averege;
+    }
+
+    public double averege;
 
 
-
-    public Student(String name, String lastName){
+    public Student(String name, String lastName, int totalGrades) {
+        this.totalGrades = totalGrades;
         this.name = name;
         this.lastName = lastName;
+        this.grades = new int[totalGrades];
     }
 
-    public int getTotalGrades() {
-        return totalGrades;
+
+    public void addGradeStudent(int x, int j) {
+        grades[j] = x;
     }
 
-    public int[] getGrades() {
-        return grades;
+    public int getListGrades(int j) {
+        return grades[j];
     }
 
     public String getName() {
         return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
-    public void setGrades(int[] grades) {
-        this.grades = grades;
+    public void averageGradesStudent(int x) {
+        this.averege += (double) x / totalGrades;
     }
-
-    public void setTotalGrades(int totalGrades) {
-        this.totalGrades = totalGrades;
-    }
-
 
 
 }
